@@ -10,6 +10,6 @@
 
 <br>
 So you are ${param.studentName}, huh?!
-
+${message}
 </body>
 </html>
