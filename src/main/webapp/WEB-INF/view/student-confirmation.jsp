@@ -1,11 +1,5 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Wojtkowiak Jedrzej
-  Date: 12/4/2018
-  Time: 10:00 AM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <title>Student Confirmation</title>
@@ -17,6 +11,14 @@ The student is confirmed: ${student.lastName} ${student.firstName}
 Country: ${student.country}
 <br>
 Language: ${student.favouriteProgrammingLanguage}
+<br>
+Owned pets:
+<ul>
+    <c:forEach var="tmp" items="${student.ownedPets}">
+        <li>${tmp}</li>
+    </c:forEach>
+</ul>
+
 
 </body>
 </html>

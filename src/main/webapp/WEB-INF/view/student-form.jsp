@@ -25,7 +25,11 @@
         <form:options items="${countryOptions}"/>
     </form:select>
     <br>
+    Fav programming language:
     <form:radiobuttons path="favouriteProgrammingLanguage" items="${programmingLanguages}"/>
+    <br>
+    Owned pets:
+    <form:checkboxes path="ownedPets" items="${pets}"/>
     <br>
     <input type="submit" value="Submit">
 </form:form>

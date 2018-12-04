@@ -20,6 +20,9 @@ public class StudentController {
     @Value("#{programmingLanguages}")
     private Map<String, String> programmingLanguages;
 
+    @Value("#{pets}")
+    private Map<String, String> pets;
+
     @RequestMapping(value = "/showForm", method = RequestMethod.GET)
     public String showForm(Model model) {
 
@@ -28,8 +31,8 @@ public class StudentController {
         model.addAttribute("student", student);
         model.addAttribute("countryOptions", countryOptions);
         model.addAttribute("programmingLanguages", programmingLanguages);
+        model.addAttribute("pets", pets);
 
-        System.out.println(programmingLanguages);
         return "student-form";
     }
 
