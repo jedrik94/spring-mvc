@@ -1,5 +1,6 @@
 package pl.jedrik94.demo.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -7,9 +8,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import pl.jedrik94.demo.model.Student;
 
+import java.util.Map;
+
 @Controller
 @RequestMapping("/student")
 public class StudentController {
+
+    @Value("#{countryOptions}")
+    private Map<String, String> countryOptions;
 
     @RequestMapping(value = "/showForm", method = RequestMethod.GET)
     public String showForm(Model model) {
@@ -17,6 +23,8 @@ public class StudentController {
         Student student = new Student();
 
         model.addAttribute("student", student);
+
+        model.addAttribute("countryOptions", countryOptions);
 
         return "student-form";
     }
