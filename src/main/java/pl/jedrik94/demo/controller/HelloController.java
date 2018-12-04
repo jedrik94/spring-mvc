@@ -20,7 +20,7 @@ public class HelloController {
         return "hello";
     }
 
-    @RequestMapping(value = "/processFormUpper")
+    @RequestMapping(value = "/processFormUpper", method = RequestMethod.GET)
     public String showFormToUpperCase(@RequestParam(value = "studentName") String name, Model model) {
         String result = "U got that, " + name.toUpperCase() + "!";
 
