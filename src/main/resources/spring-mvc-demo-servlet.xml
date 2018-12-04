@@ -14,6 +14,7 @@
 
     <context:component-scan base-package="pl.jedrik94.demo"/>
     <util:properties id="countryOptions" location="classpath*:countries.properties"/>
+    <util:properties id="programmingLanguages" location="classpath*:programming-languages.properties"/>
     <mvc:annotation-driven/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

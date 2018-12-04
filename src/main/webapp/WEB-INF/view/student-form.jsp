@@ -25,6 +25,8 @@
         <form:options items="${countryOptions}"/>
     </form:select>
     <br>
+    <form:radiobuttons path="favouriteProgrammingLanguage" items="${programmingLanguages}"/>
+    <br>
     <input type="submit" value="Submit">
 </form:form>
 

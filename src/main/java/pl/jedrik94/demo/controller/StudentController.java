@@ -17,15 +17,19 @@ public class StudentController {
     @Value("#{countryOptions}")
     private Map<String, String> countryOptions;
 
+    @Value("#{programmingLanguages}")
+    private Map<String, String> programmingLanguages;
+
     @RequestMapping(value = "/showForm", method = RequestMethod.GET)
     public String showForm(Model model) {
 
         Student student = new Student();
 
         model.addAttribute("student", student);
-
         model.addAttribute("countryOptions", countryOptions);
+        model.addAttribute("programmingLanguages", programmingLanguages);
 
+        System.out.println(programmingLanguages);
         return "student-form";
     }
 
