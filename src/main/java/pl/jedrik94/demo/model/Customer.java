@@ -20,4 +20,7 @@ public class Customer implements Serializable {
     @Min(value = 0, message = "Value in this field should be positive or 0.")
     @Max(value = 25, message = "You can't have more than 25. Or you can?!")
     private int numberOfChildren;
+
+    @Pattern(regexp = "\\d{2}-\\d{3}", message = "Incorrect postal code. Example: 12-345")
+    private String postalCode;
 }
