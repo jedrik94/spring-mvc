@@ -5,10 +5,14 @@
     <title>Customer Confirmation</title>
 </head>
 <body>
-Customer confirmed. First name: ${customer.firstName}, ${customer.lastName}
+Customer confirmed.
+<br>
+Hello customer ${customer.firstName} ${customer.lastName}!
 <br>
 You have ${customer.numberOfChildren} children, cool.
 <br>
 Postal code: ${customer.postalCode}
+<br>
+Old School Runescape Name: ${customer.oldSchoolRunescapeName}
 </body>
 </html>

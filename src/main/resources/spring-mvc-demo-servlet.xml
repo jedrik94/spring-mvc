@@ -14,9 +14,11 @@
         http://www.springframework.org/schema/util/spring-util.xsd">
 
     <context:component-scan base-package="pl.jedrik94.demo"/>
+
     <util:properties id="countryOptions" location="classpath*:countries.properties"/>
     <util:properties id="programmingLanguages" location="classpath*:programming-languages.properties"/>
     <util:properties id="pets" location="classpath*:pets.properties"/>
+
     <mvc:annotation-driven/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -24,4 +26,7 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basenames" value="messages"/>
+    </bean>
 </beans>

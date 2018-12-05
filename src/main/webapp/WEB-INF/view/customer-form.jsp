@@ -28,6 +28,10 @@
     <form:input path="postalCode"/>
     <form:errors path="postalCode" cssClass="error"/>
     <br>
+    Old School Runescape Name (have to end with @OSRS):
+    <form:input path="oldSchoolRunescapeName"/>
+    <form:errors path="oldSchoolRunescapeName" cssClass="error"/>
+    <br>
     <input type="submit" value="Submit"/>
 </form:form>
 </body>
