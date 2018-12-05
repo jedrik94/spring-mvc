@@ -20,6 +20,10 @@
     <form:input path="lastName"/>
     <form:errors path="lastName" cssClass="error"/>
     <br>
+    Number of children:
+    <form:input path="numberOfChildren"/>
+    <form:errors path="numberOfChildren" cssClass="error"/>
+    <br>
     <input type="submit" value="Submit"/>
 </form:form>
 </body>

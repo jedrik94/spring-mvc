@@ -6,5 +6,6 @@
 </head>
 <body>
 Customer confirmed. First name: ${customer.firstName}, ${customer.lastName}
+You have ${customer.numberOfChildren} children, cool.
 </body>
 </html>
