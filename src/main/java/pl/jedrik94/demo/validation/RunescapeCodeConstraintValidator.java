@@ -14,6 +14,9 @@ public class RunescapeCodeConstraintValidator implements ConstraintValidator<Run
 
     @Override
     public boolean isValid(String runescapeName, ConstraintValidatorContext constraintValidatorContext) {
+        if (runescapeName.isEmpty()) {
+            return true;
+        }
         return runescapeName.endsWith(nameSufix);
     }
 }
